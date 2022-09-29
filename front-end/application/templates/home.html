@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+
+<div>
+    <h2> Tasks List </h2>
+    {% for task in tasks %}
+
+    <p>Task Name: {{task.task_name}}</p>
+    <p>Task Description: {{task.task_description}}</p>
+</div> 

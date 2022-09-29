@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  front-end:
+    build: ./front-end
+  nginx: 
+    image: nginx:latest 
+    port: 
+      - published: 80
+        target: 80
+        protocol: tcp
+    volumes: 
+      - type: bind 
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    depends_on:
+      - "front-end"

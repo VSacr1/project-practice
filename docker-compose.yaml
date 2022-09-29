@@ -4,7 +4,7 @@ services:
     build: ./front-end
   nginx: 
     image: nginx:latest 
-    port: 
+    ports: 
       - published: 80
         target: 80
         protocol: tcp

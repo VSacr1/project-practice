@@ -1,10 +1,13 @@
-{% extends 'layout.html' %}
-{% block body_content %}
 
-<div>
+{% block body_content%}
+
     <h2> Tasks List </h2>
-    {% for task in tasks %}
+    {% for tasks in tasks %}
 
-    <p>Task Name: {{task.task_name}}</p>
-    <p>Task Description: {{task.task_description}}</p>
-</div> 
+        <p>Task Name: {{tasks.task_name}}</p>
+        <p>Task Description: {{tasks.task_desc}}</p>
+
+    {% endfor%}
+
+
+{% endblock body_content%}

@@ -2,6 +2,18 @@ version: "3.8"
 services:
   front-end:
     build: ./front-end
+    depends_on:
+      - "mysql"
+  
+  mysql: 
+    build: ./db
+    ports: 
+      - target: 3306
+        published: 3306
+    environment: 
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      #MYSQL_DATABASE: exampledb
+
   nginx: 
     image: nginx:latest 
     ports: 
@@ -14,3 +26,4 @@ services:
         target: /etc/nginx/nginx.conf
     depends_on:
       - "front-end"
+      - "mysql"

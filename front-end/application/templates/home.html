@@ -1,0 +1,13 @@
+
+{% block body_content%}
+
+    <h2> Tasks List </h2>
+    {% for tasks in tasks %}
+
+        <p>Task Name: {{tasks.task_name}}</p>
+        <p>Task Description: {{tasks.task_desc}}</p>
+
+    {% endfor%}
+
+
+{% endblock body_content%}

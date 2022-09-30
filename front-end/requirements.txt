@@ -1,0 +1,10 @@
+Flask
+itsdangerous
+markupsafe
+Jinja2
+requests
+flask_sqlalchemy
+pymysql
+WTForms
+WTForms-SQLAlchemy
+werkzeug==2.0.3

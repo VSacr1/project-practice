@@ -1,0 +1,10 @@
+
+{% block body_content %}
+    <h1> Add task</h1>
+    <form action='' method='POST'>
+        {{ form.hidden_tag() }}
+        <p> Task Name: {{form.task_name}}</p> 
+        <p> Task Description: {{form.task_desc}}</p> 
+        {{ form.submit }}
+    </form>
+{% endblock body_content %}
